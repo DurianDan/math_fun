@@ -1,0 +1,7 @@
+fn productArray(){
+    
+}
+
+fn main(){
+
+}
