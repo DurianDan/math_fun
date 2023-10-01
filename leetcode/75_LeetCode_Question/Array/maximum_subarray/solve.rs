@@ -1,6 +1,6 @@
 use std::cmp::max;
 
-pub fn max_sub_array(nums: Vec<i32>) -> i32 {
+pub fn max_sub_array(nums: &Vec<i32>) -> i32 {
     let (mut now_sum, mut max_sum) = (nums[0],nums[0]);
     for idx in 1..nums.len(){
         now_sum = max(now_sum + nums[idx], nums[idx]);
