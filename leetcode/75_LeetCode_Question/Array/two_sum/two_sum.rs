@@ -12,6 +12,17 @@ fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
     vec![]
 }
 
+fn twosum_hashmap(nums: &Vec<i32>, target: i32) -> Vec<i32>{
+    let mut table = HashMap::<i32, i32>::new();
+    for (idx, num) in nums.iter().enumerate(){
+        match table.get(target-num) {
+            Some(remainer_idx) => return vec![idx, remainer_idx],
+            None => table.insert(num, idx)
+        }
+    }
+    return vec![];
+}
+
 fn main(){
     let test_num: i32 = 12;
     let test_vec = vec![1,2,3,4,5,6,7,8];
